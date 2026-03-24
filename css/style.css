@@ -1,1 +1,25 @@
+body {
+  margin: 0;
+}
 
+div.menu	{ font-weight: bold;
+		  color: blue;
+		  text-align: center;
+		  padding: .2em;
+                  background-color: #F7F7F7 }
+
+div.menu a 	{ font-weight: bold;
+		  color: #2941D9;
+		  font-family: arial;
+		  padding: 2em;
+		  text-decoration: none }
+
+.heading	{ font-weight: bold;
+		  color: black;
+		  padding: 20px;
+		  background-color: #EBFFF6; 
+		  font-family: arial }
+
+.heading h1  	{
+		  margin: 0;
+		}

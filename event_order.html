@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>events</title>
+        <link rel = "stylesheet" type ="text/css"
+	href= "css/style.css" />
+    <style>
+	th,td { font-size : 25px;
+		color : #C81CDE;
+		text-align: center
+	      }
+	body  { background-color: #FAE8FF;
+		font-family: Arial, Helvetica, sans-serif
+	      }
+    </style>
+  
+    <script type="text/javascript">
+        function newFest() {
+            var eventName;
+            var duration;
+            var result = "<h3 align='center'>Events</h3>" + 
+                "<table border='1' align='center' cellpadding='8' cellspacing='0' width = '65%'>" +
+                "<tr><th>Event</th><th>Duration</th></tr>";
 
+            var total = 0;
+
+            while (true) {
+                eventName = window.prompt("Enter name of the event (Enter -1 to Exit)");
+
+                if (eventName === "-1" || eventName === null) break;
+
+                duration = window.prompt("Enter duration");
+
+                result += "<tr><td>" + eventName + "</td><td>" + duration + "</td></tr>";
+                
+                duration = parseInt(duration);
+                total += duration;
+            }
+
+            result += "<tr><th>Total duration</th><th>" + total + "</th></tr>" +
+                "</table>";
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+	<div class = "heading">
+    		<h1 align="center">Fest Flow</h1>
+	</div>
+    	<div class = "menu">
+ 		<a href = "#">Design theme</a>
+		<a href = "#">Sponsors</a>
+		<a href = "#">Guests</a>
+		<a href = "#">Events</a>
+		<a href = "#">Promotions</a>
+		<a href = "#">Brochure</a>
+	</div>
+    <h2 align="center">Event Order</h2> 
+    <hr> 
+ 
+    <p align="center"> 
+        Click the button below to create and add items. 
+    </p> 
+ 
+    <p align="center"> 
+        <button onclick="newFest()">Create new Event</button>
+    </p> 
+
+    <hr>
+
+    <div id="output"></div>
+
+</body>
+</html>
