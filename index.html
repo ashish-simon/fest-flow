@@ -1,93 +1,217 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>index</title>
-        <link rel = "stylesheet" type ="text/css"
-	href= "css/style.css" />
+<title>Fest Flow</title>
+
 <style>
-	.top { 
-     		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: black;
-		padding: .2em
-	}
-	
-	.tagline {
-		padding: .5em;
-	}
-	
-	.desc {
-		margin : 40px 150px;
-		border-color : black;
-		border-width : 4px;
-		border-style: solid; 
-     		display: flex;	
-	}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial;
+    background: #f4f6f9;
+}
 
-	button {
-		padding:5px 10px;
-		margin : 3px;
-		font-size: 12pt;
-		font-family: arial;
-		border:none;
-		border-radius: 4px;
-	}
-	
-	.footer {
-     		text-align: center; 
-     		font-size: 12pt;
-		color: white;	
-		background-color : black;
-		padding: .2em
-	}
+/* NAVBAR */
+.navbar {
+    background: #0d1b2a;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 15px;
+    background: #1b263b;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #415a77;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #e3f2fd, #f4f6f9);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    color: #0d1b2a;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+}
+
+/* SECTION */
+.section {
+    width: 85%;
+    margin: 50px auto;
+}
+
+/* EVENT CARD */
+.event-card {
+    display: flex;
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.02);
+}
+
+/* IMAGE */
+.event-card img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.event-text {
+    padding: 25px;
+}
+
+.event-text h3 {
+    margin-top: 0;
+    color: #0d1b2a;
+}
+
+.event-text p {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin: 70px 0;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cta button {
+    padding: 14px 30px;
+    background: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    background: #1b263b;
+}
+
+/* FOOTER */
+.footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
 </style>
 
 </head>
 
 <body>
-	<div class = "top">
-	<h1 style = "font-family: arial; color: white; padding: 5px; margin-left: 10px">Fest Flow</h1>
 
-	<div style = "margin-right: 10px">
-		<button onclick="" style = "background-color:white">Login</button>
-		<button onclick="" style = "background-color:white">Register</button>
-	</div>
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Fest Flow</h2>
+    <div>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </div>
+</div>
 
-	</div>
+<!-- HERO -->
+<div class="hero">
+    <h1>Where Every Detail Breathes Perfection</h1>
+    <p>A complete platform to manage college and corporate events efficiently</p>
+</div>
 
-	<div class = "tagline">
-		<p style = "font-family: monospace; font-size: 40pt; margin-left: 30px">Design. Plan. Organize.</p>
-	</div>
+<!-- EVENTS SECTION -->
+<div class="section">
 
+    <!-- EVENT 1 -->
+    <div class="event-card">
+        <img src="pic2.jpeg">
+        <div class="event-text">
+            <h3>Annual College Fest 2025</h3>
+            <p>
+                The Annual College Fest was one of the most vibrant and successful events,
+                bringing together students from various departments. It featured cultural
+                performances, technical competitions, and interactive workshops. With proper
+                sponsor management and planning, the event achieved high participation and
+                engagement.
+            </p>
+        </div>
+    </div>
 
-	<div class = "desc">
-		<p style = "font-family: arial; font-size: 20pt; margin-left: 30px">Place text</p>
-	</div>
+    <!-- EVENT 2 -->
+    <div class="event-card">
+        <img src="pic1.jpeg">
+        <div class="event-text">
+            <h3>Tech Symposium</h3>
+            <p>
+                The Tech Symposium focused on innovation and technology, where students
+                showcased projects and participated in coding challenges. Industry experts
+                were invited as speakers, making the event informative and inspiring for
+                future developers.
+            </p>
+        </div>
+    </div>
 
+    <!-- EVENT 3 -->
+    <div class="event-card">
+        <img src="pic3.jpeg">
+        <div class="event-text">
+            <h3>Sports Meet</h3>
+            <p>
+                The Sports Meet encouraged teamwork and physical fitness among students.
+                Events like cricket, football, and athletics were conducted smoothly with
+                proper coordination and volunteer support.
+            </p>
+        </div>
+    </div>
 
-	<div class = "desc">
-		<p style = "font-family: arial; font-size: 20pt; margin-left: 30px">Place text</p>
-	</div>
+</div>
 
+<!-- CTA -->
+<div class="cta">
+    <h2>What are you waiting for?</h2>
+    <button onclick="window.location.href='register.html'">Get Started Now</button>
+</div>
 
-	<div class = "desc">
-		<img src = "bro.jpg" width = "200px" alt = "check"/>
-		<p style = "font-family: arial; font-size: 20pt; margin-left: 30px">Place text</p>
-	</div>
+<!-- FOOTER -->
+<div class="footer">
+    Contact: support@festflow.com | Phone: 9032947528 <br>
+    © 2026 Fest Flow
+</div>
 
-	<p align = "center" style = "font-family: monospace; font-size: 35pt">What are you waiting for?</p>
-	<p align = "center">
-		<button style = "font-size: 30pt; border-style: solid; color: white; background-color : black; padding: 10px 15px; border-radius: 7px; margin-bottom: 80px" onclick="">Get Started Now</button>
-	</p>
-
- 	<div class="footer">
-    		<p>Contact: support@festflow.com | Phone: 9032947528</p> 
-		<p>&copy; 2026 Revamp</p>
-	</div>
 </body>
-
 </html>
-

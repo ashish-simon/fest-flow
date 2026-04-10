@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #fce4ec, #f4f6f9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* BOX */
+.container {
+    width: 380px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+h2 {
+    text-align: center;
+}
+
+/* LABEL */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c2185b;
+}
+
+/* LINK */
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Register</h2>
+
+    <form action="register.php" method="POST">
+
+<label>Username:</label>
+<input type="text" name="name" required>
+
+<label>Email:</label>
+<input type="email" name="email" required>
+
+<label>Password:</label>
+<input type="password" name="password" required>
+
+<button type="submit">Register</button>
+
+</form>
+    <div class="link">
+        <a href="login.html">Already have an account? Login</a>
+    </div>
+</div>
+
+<script>
+function validateRegister() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirm = document.getElementById("confirm").value;
+
+    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (name == "") {
+        alert("Enter username");
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Enter valid email");
+        return false;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return false;
+    }
+
+    if (password != confirm) {
+        alert("Passwords do not match");
+        return false;
+    }
+
+    alert("Registration successful");
+    return true;
+}
+</script>
+
+</body>
+</html>
