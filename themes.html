@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Themes</title>
 
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* MAIN CENTER */
+.main {
+    width: 600px;
+    margin: 30px auto;
+}
+
+/* FORM */
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* SEARCH */
+.search-box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* SUMMARY */
+.summary {
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* CARDS */
+.card-container {
+    margin-top: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* TYPE COLORS */
+.gold { border-left-color: gold; }
+.silver { border-left-color: silver; }
+.bronze { border-left-color: #cd7f32; }
+
+/* IMAGE */
+.card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* DELETE */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+Smart Event Management - Sponsors
+</div>
+
+<div class="main">
+    <!-- FORM -->
+    <div class="form-section">
+        <h2>Upload file</h2>
+
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label>Sponsor Name:</label>
+            <input type="file" name="area_image" required>
+            <button type="submit" name = "upload">Upload</button>
+        </form>
+    </div>
+
+    <!-- CARDS -->
+    <div class="card-container" id="cards"></div>
+</div>
+
+</body>
+</html>
