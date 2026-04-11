@@ -64,7 +64,7 @@ echo "<img src='uploads/".$row['image']."'>";
 echo "<form action='suggestion.php' method='POST'>";
 echo "<input type='hidden' name='event_id' value='".$row['id']."'>";
 echo "<textarea name='suggestion' placeholder='Give suggestion...' required></textarea>";
-echo "<button type='submit'>Submit</button>";
+echo "<button type='submit' name='submit'>Submit</button>";
 echo "</form>";
 
 
