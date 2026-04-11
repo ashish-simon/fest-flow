@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         VALUES ('$name','$company','$designation','$email','$phone','$linkedin','$type','$amount')";
 
     if (mysqli_query($conn, $query)) {
-        header("Location: viewsponsors.php");
+        header("Location: view_sponsors.php");
     }
 }
 ?>
@@ -160,7 +160,7 @@ Smart Event Management - Sponsors
     <div class="form-section">
         <h2>Add Sponsor</h2>
 
-        <form action="sponsors.php" method="POST">
+        <form method="POST">
 
             <label>Sponsor Name:</label>
             <input type="text" name="name" required>
