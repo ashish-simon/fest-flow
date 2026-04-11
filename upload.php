@@ -1,23 +1,26 @@
 <?php
-include "db.php";
+$conn = new mysqli("localhost", "root", "", "mydb");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $name = $_POST['name'];
-$company = $_POST['company'];
-$designation = $_POST['designation'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$linkedin = $_POST['linkedin'];
-$type = $_POST['type'];
-$amount = $_POST['amount'];
 
-$sql = "INSERT INTO sponsors 
-(name, company, designation, email, phone, linkedin, type, amount)
-VALUES 
-('$name','$company','$designation','$email','$phone','$linkedin','$type','$amount')";
+$image = $_FILES['image']['name'];
+$tmp = $_FILES['image']['tmp_name'];
 
-if ($conn->query($sql)) {
-    echo "Sponsor added successfully";
+$folder = "uploads/" . $image;
+
+move_uploaded_file($tmp, $folder);
+
+$sql = "INSERT INTO users (name, image) VALUES ('$name', '$image')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Data saved successfully! <br><a href='index.html'>Go Back</a>";
 } else {
     echo "Error: " . $conn->error;
 }
+
+$conn->close();
 ?>

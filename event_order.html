@@ -16,13 +16,40 @@
                 font-family: "Times New Roman", Times, serif;
             }
         }
-	th,td { font-size : 25px;
-		color : #C81CDE;
-		text-align: center
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {background-color: #D6EEEE;}
+	
+    th,td { font-size : 25px;
+            color: #0d1b2a;
+		    text-align: center;
 	      }
-	body  { background-color: #FAE8FF;
-		font-family: Arial, Helvetica, sans-serif
+
+	body  { 
+            background: linear-gradient(to right, #e3f2fd, #f4f6f9);
+		    font-family: Arial, Helvetica, sans-serif
 	      }
+    
+    button {
+            background-color: white;
+            font-size: 14pt;
+            border-radius: 12px;
+            padding: 14px 40px;
+            border-color:#0d1b2a;
+            margin-bottom: 20px
+    }
+
+    button:hover{
+            background-color: #D6EEEE;
+    }
+
     </style>
   
     <script type="text/javascript">
@@ -30,8 +57,8 @@
             var eventName;
             var duration;
             var result = "<h3 align='center'>Events</h3>" + 
-                "<table border='1' align='center' cellpadding='8' cellspacing='0' width = '65%'>" +
-                "<tr><th>Event</th><th>Duration</th></tr>";
+                "<table align='center' cellpadding='8' cellspacing='0' width = '50%'>" +
+                "<tr><th>Event</th><th>Duration (in min)</th></tr>";
 
             var total = 0;
 
@@ -61,12 +88,12 @@
     		<h1 align="center">Fest Flow</h1>
 	</div>
     	<div class = "menu">
- 		<a href = "#">Design theme</a>
-		<a href = "#">Sponsors</a>
-		<a href = "#">Guests</a>
-		<a href = "#">Events</a>
-		<a href = "#">Promotions</a>
-		<a href = "#">Brochure</a>
+        <a href="themes.html">Design Theme</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="guests.html">Guests</a>
+        <a href="event_order.html">Events</a>
+        <a href="promotions.html">Promotions</a>
+        <a href="brochure.html">Brochure</a>
 	</div>
     <h2 align="center">Event Order</h2> 
     <hr> 
