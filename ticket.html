@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ticket Calculator</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #e3f2fd, #f4f6f9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#output {
+    margin-top: 15px;
+    text-align: center;
+}
+</style>
+
+<script>
+function calculate() {
+    var tickets = document.getElementById("tickets").value;
+
+    if(tickets == "" || tickets <= 0) {
+        alert("Enter valid number");
+        return;
+    }
+
+    var price = 100;
+    var total = tickets * price;
+    var discount = 0;
+
+    if(tickets >= 10) {
+        discount = total * 0.20;
+    }
+    else if(tickets >= 5) {
+        discount = total * 0.10;
+    }
+
+    var final = total - discount;
+
+    document.getElementById("output").innerHTML =
+        "Total: ₹" + total + "<br>" +
+        "Discount: ₹" + discount + "<br>" +
+        "<b>Final Price: ₹" + final + "</b>";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Ticket Calculator</h2>
+
+    <label>Number of Tickets:</label>
+    <input type="number" id="tickets">
+
+    <button onclick="calculate()">Calculate Price</button>
+
+    <p id="output"></p>
+</div>
+
+</body>
+</html>

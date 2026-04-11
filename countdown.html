@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Countdown</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #e3f2fd, #f4f6f9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#result {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+</style>
+
+<script>
+function calculate() {
+    var date = document.getElementById("eventDate").value;
+
+    if(date == "") {
+        alert("Select a date");
+        return;
+    }
+
+    var today = new Date();
+    var event = new Date(date);
+
+    var diff = event - today;
+    var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+    if(days >= 0)
+        document.getElementById("result").innerHTML = days + " days left for event";
+    else
+        document.getElementById("result").innerHTML = "Event already completed";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Event Countdown</h2>
+
+    <label>Select Event Date:</label>
+    <input type="date" id="eventDate">
+
+    <button onclick="calculate()">Check Days Left</button>
+
+    <p id="result"></p>
+</div>
+
+</body>
+</html>
