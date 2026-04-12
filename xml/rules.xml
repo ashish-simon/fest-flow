@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rules SYSTEM "rules.dtd">
+
+<?xml-stylesheet type="text/xsl" href="rules.xsl"?>
+
+<rules>
+    <rule>
+        <title>Timing</title>
+        <description>All events must end before 10 PM</description>
+    </rule>
+
+    <rule>
+        <title>Budget Approval</title>
+        <description>All expenses must be approved</description>
+    </rule>
+
+    <rule>
+        <title>Cleanliness</title>
+        <description>Maintain cleanliness in all areas</description>
+    </rule>
+</rules>
