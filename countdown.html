@@ -2,16 +2,22 @@
 <html>
 <head>
 <title>Event Countdown</title>
-
+<link rel = "stylesheet" type ="text/css" href= "css/style.css" />
 <style>
 body {
     margin: 0;
     font-family: Arial;
     background: linear-gradient(to right, #e3f2fd, #f4f6f9);
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 .container {
@@ -78,16 +84,27 @@ function calculate() {
     var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
 
     if(days >= 0)
-        document.getElementById("result").innerHTML = days + " days left for event";
+        document.getElementById("result").innerHTML = "<br><h1 style='color:green'>" + days + " days left for event<h1>";
     else
-        document.getElementById("result").innerHTML = "Event already completed";
+        document.getElementById("result").innerHTML = "<br><h1 style='color:red'>Event already completed<h1>";
 }
 </script>
 
 </head>
 
 <body>
-
+    <div class="heading">
+        <h1 align = "center">Fest Flow</h1>
+    </div>
+	<div class="menu">
+        <a href="dashboard.html">Home</a>
+        <a href="themes.html">Upload Image</a>
+        <a href="view_events.php">Suggest Theme</a>
+        <a href="add_sponsors.php">Sponsors</a>
+        <a href="view_sponsors.php">View Sponsors</a>
+        <a href="event_order.html">Events</a>
+    </div>
+<div  class="main">
 <div class="container">
     <h2>Event Countdown</h2>
 
@@ -97,6 +114,7 @@ function calculate() {
     <button onclick="calculate()">Check Days Left</button>
 
     <p id="result"></p>
+</div>
 </div>
 
 </body>

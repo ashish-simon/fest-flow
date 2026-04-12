@@ -24,7 +24,7 @@
             flex-wrap: wrap;
         }
         .card {
-            width: 200px;
+            width: 300px;
             background: white;
             padding: 15px;
             border: 1px solid white;
@@ -33,7 +33,7 @@
         }
         .card img {
             width: 100%;
-            height: 120px;
+            height: 200px;
         }
         .card:hover {
             background-color: #e6f2ff;
@@ -57,46 +57,47 @@
         <h1>Fest Flow</h1>
     </div>
 	<div class="menu">
-        <a href="themes.html">Design Theme</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="guests.html">Guests</a>
+        <a href="themes.html">Upload Image</a>
+        <a href="view_events.php">Suggest Theme</a>
+        <a href="add_sponsors.php">Sponsors</a>
+        <a href="view_sponsors.php">View Sponsors</a>
         <a href="event_order.html">Events</a>
-        <a href="promotions.html">Promotions</a>
-        <a href="brochure.html">Brochure</a>
     </div>
 
     <!-- Dashboard -->
-    
+    <br>
     <div class="container">
-        <div class="card" onclick="location.href='themes.html'">
+        <div class="card" onclick="location.href='view_events.php'">
             <img src="design.jpg" alt="Theme">
             <h3>Design Theme</h3>
             <p>Choose event themes for decorations</p>
         </div>
 
-        <div class="card" onclick="location.href='sponsors.html'">
+        <div class="card" onclick="location.href='view_sponsors.php'">
             <img src="sponsors.jpg" alt="Sponsors">
             <h3>Sponsors</h3>
             <p>View and edit sponsors list</p>
         </div>
 
-        <div class="card" onclick="location.href='guests.html'">
-            <img src="guests.jpg" alt="Guests">
-            <h3>Volunteer</h3>
-            <p>Manage and support guests</p>
+        <div class="card" onclick="location.href='ticket.html'">
+            <img src="ticket.jpg" alt="ticket">
+            <h3>Ticket</h3>
+            <p>Track ticket price</p>
         </div>
 
-        <div class="card" onclick="location.href='budget.html'">
-            <img src="budget.jpg" alt="Budget">
-            <h3>Budget</h3>
-            <p>Track expenses</p>
-        </div>
-
+     <div class="container">
         <div class="card" onclick="location.href='event_order.html'">
             <img src="order.jpg" alt="Orders">
             <h3>Event Orders</h3>
             <p>Manage event orders</p>
         </div>
+
+        <div class="card" onclick="location.href='countdown.html'">
+            <img src="countdown.jpg" alt="Countdown">
+            <h3>Countdown</h3>
+            <p>:)</p>
+        </div>
     </div>
+    <br>
 </body>
 </html>

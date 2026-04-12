@@ -7,7 +7,7 @@ $result = $conn->query("SELECT * FROM events");
 <html>
 <head>
 <title>Event Gallery</title>
-
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <style>
 body {
     font-family: Arial;
@@ -49,6 +49,20 @@ button {
 </head>
 
 <body>
+    <!-- Heading -->
+    <div class="heading">
+        <h1>Fest Flow</h1>
+    </div>
+	<div class="menu">
+        <a href="dashboard.html">Home</a>
+        <a href="themes.html">Upload Image</a>
+        <a href="add_sponsors.php">Sponsors</a>
+        <a href="view_sponsors.php">View Sponsors</a>
+        <a href="event_order.html">Events</a>
+    </div>
+
+    <!-- Dashboard -->
+    <br>
 
 <h2>Event Gallery</h2>
 

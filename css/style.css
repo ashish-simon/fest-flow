@@ -5,14 +5,14 @@ body {
 div.menu { 	font-weight: bold;
 			color: #0d1b2a;
 		 	text-align: center;
-		  	padding: .7em;
+		  	padding: .3em;
 			margin: 0;
             background-color: #F7F7F7 }
 
 div.menu a 	{ font-weight: bold;
 		  color: #0d1b2a;
 		  font-family: arial;
-		  padding: 3em;
+		  padding: 2em;
 		  text-decoration: none }
 
 .heading	{ font-weight: bold;

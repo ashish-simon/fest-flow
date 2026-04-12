@@ -4,20 +4,49 @@
 <html>
 <head>
     <title>Potential Sponsors</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <style>
-        body { font-family: Arial; background: #f4f4f4; }
+        body { font-family: Arial; background: #f2f2f2; }
         .container { width: 80%; margin: auto; }
         h2 { text-align: center; }
         table { width: 100%; border-collapse: collapse; background: #fff; }
         th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
-        th { background: #007bff; color: white; }
+        th {background-color: #2C3E50;
+            color: white;}
+
+        tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {background-color: #D6EEEE;}
+
         a { text-decoration: none; padding: 5px 10px; }
-        .btn { background: green; color: white; }
-        .edit { background: orange; color: white; }
-        .delete { background: red; color: white; }
+        .btn { background: #4488aa; color: white; }
+        .edit { color: black;        
+            background-color: lightblue;
+            border-radius: 4px;  
+        }
+
+        .delete { color: black;        
+            background-color: lightpink;
+            border-radius: 4px;   }
     </style>
 </head>
 <body>
+    <!-- Heading -->
+    <div class="heading">
+        <h1 align = "center">Fest Flow</h1>
+    </div>
+	<div class="menu">
+        <a href="dashboard.html">Home</a>
+        <a href="themes.html">Upload Image</a>
+        <a href="view_events.php">Suggest Theme</a>
+        <a href="add_sponsors.php">Sponsors</a>
+        <a href="event_order.html">Events</a>
+    </div>
+
+    <!-- Dashboard -->
+    <br>
 
 <div class="container">
     <h2>Potential Sponsors</h2>
@@ -28,10 +57,10 @@
             <th>ID</th>
             <th>Name</th>
             <th>Designation</th>
-            <th>email</th>
+            <th>Email</th>
             <th>Phone</th>
             <th>LinkedIn</th>
-            <th>type</th>
+            <th>Type</th>
             <th>Amount</th>
         </tr>
 

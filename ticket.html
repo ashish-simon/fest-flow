@@ -2,16 +2,22 @@
 <html>
 <head>
 <title>Ticket Calculator</title>
-
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <style>
 body {
     margin: 0;
     font-family: Arial;
     background: linear-gradient(to right, #e3f2fd, #f4f6f9);
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 .container {
@@ -65,10 +71,10 @@ button:hover {
 function calculate() {
 
     alert(
-        "Ticket Price: ₹100 per ticket\n\n" +
+        "Ticket Price: Rs.100 per ticket\n\n" +
         "Discount Policy:\n" +
-        "5 or more tickets → 10% discount\n" +
-        "10 or more tickets → 20% discount"
+        "5 or more tickets at 10% discount\n" +
+        "10 or more tickets at 20% discount"
     );
 
     var tickets = document.getElementById("tickets").value;
@@ -92,21 +98,33 @@ function calculate() {
     var final = total - discount;
 
     document.getElementById("output").innerHTML =
-        "Total: ₹" + total + "<br>" +
-        "Discount: ₹" + discount + "<br>" +
-        "<b>Final Price: ₹" + final + "</b>";
+        "Total: Rs." + total + "<br>" +
+        "Discount: Rs." + discount + "<br>" +
+        "<b>Final Price: Rs." + final + "</b>";
 }
 </script>
 
 </head>
 
 <body>
+    <div class="heading">
+        <h1 align = "center">Fest Flow</h1>
+    </div>
+	<div class="menu">
+        <a href="dashboard.html">Home</a>
+        <a href="themes.html">Upload Image</a>
+        <a href="view_events.php">Suggest Theme</a>
+        <a href="add_sponsors.php">Sponsors</a>
+        <a href="view_sponsors.php">View Sponsors</a>
+        <a href="event_order.html">Events</a>
+    </div>
 
+<div class="main">
 <div class="container">
     <h2>Ticket Price Calculator</h2>
 
     <p style="text-align:center; font-size:14px;">
-        Price: ₹100 per ticket <br>
+        Price: Rs.100 per ticket <br>
         Discounts available on bulk booking
     </p>
 
@@ -116,6 +134,7 @@ function calculate() {
     <button onclick="calculate()">Calculate Price</button>
 
     <p id="output"></p>
+</div>
 </div>
 
 </body>

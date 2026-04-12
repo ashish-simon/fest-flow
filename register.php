@@ -9,7 +9,7 @@ $sql = "INSERT INTO users (name, email, password)
 VALUES ('$name', '$email', '$password')";
 
 if ($conn->query($sql)) {
-    echo "Registration successful";
+    header("Location: dashboard.html");
 } else {
     echo "Error: " . $conn->error;
 }

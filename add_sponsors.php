@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 <title>Smart Event - Sponsors</title>
-
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <style>
 body {
     font-family: Arial;
@@ -34,11 +34,12 @@ body {
 
 /* HEADER */
 .header {
-    background: #2c3e50;
-    color: white;
+    background: #f2f2f2;;
+    color: #2C3E50;
     padding: 15px;
     text-align: center;
     font-size: 22px;
+    font-weight: bold;
 }
 
 /* MAIN CENTER */
@@ -149,6 +150,19 @@ button {
 </head>
 
 <body>
+    <div class="heading">
+        <h1 align = "center">Fest Flow</h1>
+    </div>
+	<div class="menu">
+        <a href="dashboard.html">Home</a>
+        <a href="themes.html">Upload Image</a>
+        <a href="view_events.php">Suggest Theme</a>
+        <a href="view_sponsors.php">View Sponsors</a>
+        <a href="event_order.html">Events</a>
+    </div>
+
+    <!-- Dashboard -->
+    <br>
 
 <div class="header">
 Smart Event Management - Sponsors
